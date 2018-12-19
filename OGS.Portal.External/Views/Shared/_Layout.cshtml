@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - OGS.Portal.External</title>
+
+    @*<environment include="Development">
+            <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+            <link rel="stylesheet" href="~/css/site.css" />
+        </environment>
+        <environment exclude="Development">
+            <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+                  asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+                  asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+            <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        </environment>*@
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="SimpliQ - Bootstrap 4 Admin Template">
+    <meta name="author" content="Łukasz Holeczek">
+    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,AngularJS,Angular,Angular2,jQuery,CSS,HTML,RWD,Dashboard,Vue,Vue.js,React,React.js">
+    <link rel="shortcut icon" href="~/img/favicon.png">
+
+    @*<title>SimpliQ - Bootstrap 4 Admin Template</title>*@
+    <!-- Icons -->
+    @*<link href="~/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+        <link href="~/css/flag-icon.min.css" rel="stylesheet" />
+        <link href="~/css/simple-line-icons.min.css" rel="stylesheet" />*@
+
+    <link href="~/vendors/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/vendors/css/flag-icon.min.css" rel="stylesheet">
+    <link href="~/vendors/css/simple-line-icons.min.css" rel="stylesheet">
+
+    <!-- Main styles for this application -->
+    <link href="~/vendors/css/style.css" rel="stylesheet">
+    <!-- Styles required by this views -->
+    <link href="~/vendors/css/daterangepicker.min.css" rel="stylesheet">
+    <link href="~/vendors/css/gauge.min.css" rel="stylesheet">
+    <link href="~/vendors/css/toastr.min.css" rel="stylesheet">
+
+    @*<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/dataTables.bootstrap.css" />*@
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.2/css/buttons.bootstrap4.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css" />
+
+</head>
+<!-- BODY options, add following classes to body to change options
+
+// Header options
+1. '.header-fixed'					- Fixed Header
+
+// Brand options
+1. '.brand-minimized'       - Minimized brand (Only symbol)
+
+// Sidebar options
+1. '.sidebar-fixed'					- Fixed Sidebar
+2. '.sidebar-hidden'				- Hidden Sidebar
+3. '.sidebar-off-canvas'		- Off Canvas Sidebar
+4. '.sidebar-minimized'			- Minimized Sidebar (Only icons)
+5. '.sidebar-compact'			  - Compact Sidebar
+
+// Aside options
+1. '.aside-menu-fixed'			- Fixed Aside Menu
+2. '.aside-menu-hidden'			- Hidden Aside Menu
+3. '.aside-menu-off-canvas'	- Off Canvas Aside Menu
+
+// Breadcrumb options
+1. '.breadcrumb-fixed'			- Fixed Breadcrumb
+
+// Footer options
+1. '.footer-fixed'					- Fixed footer
+
+-->
+<body class="app header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden">
+    <header class="app-header navbar">
+        <button class="navbar-toggler mobile-sidebar-toggler d-lg-none" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- <a class="navbar-brand" href="#"></a> -->
+        <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button">
+            <span class="navbar-toggler-icon"></span>
+            <br>
+            <span style="color: white; font-size: 10px;">MENU</span>
+            <!-- OFFICE OF NYS -->
+        </button> &nbsp;
+        <img src="//static-assets.ny.gov/sites/all/themes/ny_gov/images/logo_footer.png" alt="New York State Logo" style="float: left; padding: 10px 20px 10px 10px;">
+        <div style="text-align:left;">
+            <span style="color: white; font-size: 15px;padding:1px;">Office of General Services</span><br />
+            <span style="color: white; font-size: 15px;padding:1px;">VENDOR PORTAL EXTERNAL</span>
+        </div>
+        <ul class="nav navbar-nav d-md-down-none mr-auto"></ul>
+        <ul class="nav navbar-nav ml-auto">
+          
+            <li class="nav-item dropdown">
+                <a class="nav-link nav-link" data-toggle="dropdown" href="#" role="button"
+                   aria-haspopup="true" aria-expanded="false" style="padding-right:10px;">
+                    @*<img class="img-avatar" src="~/img/avatars/6.jpg" alt="admin@bootstrapmaster.com">*@ Sign in / Create an Account &nbsp;
+                    <span class="navbar-toggler-icon"></span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" style="padding-right:5px;">
+                    <div class="dropdown-header text-center"><strong>Account</strong></div><a class="dropdown-item" href="#">
+                        <i class="fa fa-bell-o"></i> Updates<span class="badge badge-info">42</span>
+                    </a><a class="dropdown-item" href="#"><i class="fa fa-envelope-o"></i>Messages<span class="badge badge-success">42</span></a><a class="dropdown-item" href="#"><i class="fa fa-tasks"></i>Tasks<span class="badge badge-danger">42</span></a><a class="dropdown-item" href="#"><i class="fa fa-comments"></i>Comments<span class="badge badge-warning">42</span></a>
+                    <div class="dropdown-header text-center"><strong>Settings</strong></div><a class="dropdown-item" href="#">
+                        <i class="fa fa-user"></i> Profile
+                    </a><a class="dropdown-item" href="#">
+                        <i class="fa fa-wrench"></i>
+                        Settings
+                    </a><a class="dropdown-item" href="#"><i class="fa fa-usd"></i> Payments<span class="badge badge-dark">42</span></a><a class="dropdown-item" href="#"><i class="fa fa-file"></i>Projects<span class="badge badge-primary">42</span></a>
+                    <div class="divider"></div><a class="dropdown-item" href="#"><i class="fa fa-shield"></i> Lock Account</a><a class="dropdown-item" href="#"><i class="fa fa-lock"></i>Logout</a>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <div class="app-body">
+        <div class="sidebar">
+            <nav class="sidebar-nav">
+                <ul class="nav">
+                    <!-- <li class="nav-item">
+                      <a class="nav-link" href="index.html"><i class="icon-speedometer"></i> Dashboard <span class="badge badge-info">NEW</span></a>
+                    </li> -->
+                    <!-- <li class="nav-item hidden-cn">
+                      <a class="nav-label" href="#"><span style="margin-left: 40px">MAIN</span></a>
+                    </li>
+                    <li class="nav-item hidden-cn">
+                      <a class="nav-label" href="#"><span style="margin-left: 40px">MAIN</span></a>
+                    </li>
+                    <li class="nav-item hidden-cn">
+                      <a class="nav-label" href="#"><span style="margin-left: 40px">MAIN</span></a>
+                    </li>
+                    <li class="nav-item hidden-cn">
+                      <a class="nav-label" href="#"><span style="margin-left: 40px">MAIN</span></a>
+                    </li>
+                    <li class="nav-item hidden-cn">
+                      <a class="nav-label" href="#"><span style="margin-left: 40px">MAIN</span></a>
+                    </li>
+                    <li class="nav-item hidden-cn">
+                      <a class="nav-label" href="#"><span style="margin-left: 40px">MAIN</span></a>
+                    </li>
+
+                    <li class="nav-item hidden-cn">
+                      <a class="nav-label" href="#"><i class="fa fa-circle text-info"></i>MY TASKS</a>
+                    </li>
+                    <li class="nav-item hidden-cn">
+                      <a class="nav-label" href="#"><i class="fa fa-circle text-info"></i>NEW MODIFICATION REQUESTS</a>
+                    </li>
+                    <li class="nav-item hidden-cn">
+                      <a class="nav-label" href="#"><i class="fa fa-circle text-info"></i>PENDING MODIFICATIONS</a>
+                    </li>
+                    <li class="nav-item hidden-cn">
+                      <a class="nav-label" href="#"><i class="fa fa-circle text-info"></i>DASHBOARD</a>
+                    </li>
+                    <li class="divider"></li> -->
+
+                    <li class="nav-item nav-dropdown">
+                    
+                        <a class="nav-link" href="/"><i class="nav-icon icon-speedometer"></i>Home </a>
+                        <a class="nav-link" href="/Contractor"><i class="nav-icon icon-speedometer"></i>Search </a>
+                        <a class="nav-link" href="/Contractor"><i class="nav-icon icon-speedometer"></i>Announcements </a>
+
+
+                    </li>
+                </ul>
+
+            </nav>
+            <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+        </div>
+        <!-- Main content -->
+        <main class="main">
+            @*<ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">DASHBOARD</a></li>
+                    <li class="breadcrumb-item active">MAIN</li>
+                </ol>*@
+            <div class="container-fluid">
+                @RenderBody()
+            </div>
+            <!-- /.conainer-fluid -->
+        </main>
+    </div>
+
+
+    <footer class="app-footer">
+        <span> © 2018 New York State</span>
+        <span class="ml-auto">Powered by he<a href="https://ny.gov"> Chief Technology Office</a></span>
+    </footer>
+    <environment include="Development">
+        <!-- Bootstrap and necessary plugins -->
+        <script src="~/vendors/js/jquery.min.js"></script>
+        <script src="~/vendors/js/popper.min.js"></script>
+        <script src="~/vendors/js/bootstrap.min.js"></script>
+        <script src="~/vendors/js/pace.min.js"></script>
+        <!-- SimpliQ main scripts -->
+        <script src="~/js/app.js"></script>
+        <!-- Plugins and scripts required by this views -->
+        <script src="~/vendors/js/toastr.min.js"></script>
+        <script src="~/vendors/js/gauge.min.js"></script>
+        <script src="~/vendors/js/moment.min.js"></script>
+        <script src="~/vendors/js/daterangepicker.min.js"></script>
+        <!-- Custom scripts required by this view -->
+        <!-- <script src="js/views/main.js"></script> -->
+        <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.js"></script>
+        <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+        <script src="~/js/DataTableFix.js"></script>
+
+    </environment>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
